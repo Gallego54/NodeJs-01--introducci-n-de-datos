@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #ffebb4;
+}
+
+
+
+
+
+
+
+.form-py {
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.form-py > [type="number"] {
+    height: 30px;
+    width: 90%;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.sub{
+    opacity: .7;
+    margin: 50px auto;
+    display: block;
+    height: 40px;
+    width: 25%;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgb(144, 108, 0);
+    transition: opacity 1s;
+}
+
+.sub:hover{
+    opacity: 1;
+}
+
+
+
+.title {
+    background-color: rgb(255, 216, 126);
+    padding: 20px;
+    font-size: 30px;
+    color: rgb(103, 71, 29);
+    letter-spacing: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@keyframes LeftToRigth {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 93%;
+    }
+
+}
+
+@keyframes RigthToLeft {
+    0% {
+        left: 93%;
+    }
+    100% {
+        left: 0%;
+    }
+
+}
+  
+::after {
+    opacity: .5;
+    content: '';
+    position: absolute;
+    top: 2%;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(144, 108, 0);
+    animation: LeftToRigth 5s alternate infinite;
+}
+
+::before {
+    opacity: .5;
+    content: '';
+    position: absolute;
+    top: 2%;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(144, 108, 0);
+    animation: RigthToLeft 5s alternate infinite;
+}
+
+@keyframes rumbling {
+    0% {
+        top: 41%;
+    }
+    100% {
+        top: 40%;
+    }
+}
+
+body::after{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 40%;
+    right: -10%;
+    animation: none;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 300px 300px 300px;
+    border-color: transparent transparent #ffbb00 transparent;
+    animation: rumbling .5s alternate infinite;
+}
+
+
+
+body::before{
+
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    background-color: #ffbb00;
+    top: 80%;
+    right: 0;
+    animation: none;
+    content: '';
+    width: 100%;
+    height: 50%;
+  
+   
+
+}
+
+@keyframes BIGSMALL {
+    0% {
+        font-size: 2px;
+    }
+
+    100% {
+        font-size: 10px;
+    }
+}
+
+.py{
+    
+    border-radius: 10px;
+    overflow:hidden;
+    opacity: 1;
+    border: 5px solid black;
+    border-right: 30px solid black;
+    margin: 100px auto;
+    display: block;
+    height: 200px;
+    width: 400px;
+    background-color: rgb(20, 255, 255);
+    animation: BIGSMALL 1s alternate infinite;
+}
+
+.py:hover{
+    overflow: auto;
+    animation: none;
+    font-size: 10px;
+}
+
+
+
+
